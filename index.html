@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>被遗忘的王权</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="start-screen" class="screen active">
+        <div class="content">
+            <h1>被遗忘的王权</h1>
+            <p>你并非生来尊贵，而是出生在一个被遗忘的古老王国。</p>
+            <button id="new-game-btn">开始新游戏</button>
+            <button id="load-game-btn" disabled>继续游戏</button>
+        </div>
+    </div>
+
+    <div id="attribute-screen" class="screen">
+        <div class="content attribute-content"> <h2>分配你的初始属性 (剩余点数: <span id="points-left">50</span>)</h2>
+            <div class="attribute-scroll-container"> <div id="attribute-list"></div>
+            </div>
+            <button id="confirm-attributes-btn" disabled>确认并开始冒险</button>
+        </div>
+    </div>
+<div id="item-tooltip" class="item-tooltip"></div>
+    <div id="game-screen" class="screen">
+        <div class="main-container">
+            <button id="toggle-sidebar-btn" class="toggle-btn">角色</button>
+            <div class="sidebar">
+                <h3>角色信息</h3>
+                <div id="character-info"></div>
+                <div id="inventory-info">
+                    <h4>背包</h4>
+                    <ul id="inventory-list"></ul>
+                </div>
+                <button id="save-game-btn">保存游戏</button>
+            </div>
+            <div class="main-content">
+                <div id="event-area">
+                    <p class="event-text"></p>
+                    <div id="choices-area"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ending-screen" class="screen">
+        <div class="content">
+            <h2 id="ending-title"></h2>
+            <p id="ending-text"></p>
+            <button id="return-to-menu-btn">返回主菜单</button>
+        </div>
+    </div>
+
+    <script type="module" src="src/App.js"></script>
+</body>
+</html>
