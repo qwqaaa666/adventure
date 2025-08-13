@@ -1,0 +1,126 @@
+{
+  "扭曲符文木雕": {
+    "name": "扭曲符文木雕",
+    "type": "talisman",
+    "description": "一个刻有扭曲符文的木雕，据说能增强佩戴者的精神力。",
+    "attributeEffect": {
+      "attribute": "精神",
+      "change": 5
+    }
+  },
+  "狼牙项链": {
+    "name": "狼牙项链",
+    "type": "talisman",
+    "description": "由异化狼王的獠牙制成，散发着野性的力量。",
+    "attributeEffect": {
+      "attribute": "力量",
+      "change": 3
+    }
+  },
+  "破损的铠甲碎片": {
+    "name": "破损的铠甲碎片",
+    "type": "armor",
+    "description": "来自异化守卫的铠甲，虽然破损，但仍能提供一些保护。",
+    "attributeEffect": {
+      "attribute": "耐力",
+      "change": 2
+    }
+  },
+  "剧毒腺体": {
+    "name": "剧毒腺体",
+    "type": "consumable",
+    "description": "从巢穴蜘蛛身上获取的毒腺，可用于制作毒药，或作为剧毒的解药。",
+    "attributeEffect": null
+  },
+  "堕落骑士剑": {
+    "name": "堕落骑士剑",
+    "type": "weapon",
+    "description": "一柄被异化力量侵蚀的重剑，沉重而强大，挥舞它需要巨大的力量。",
+    "attributeEffect": {
+      "attribute": "力量",
+      "change": 10
+    },
+    "attributeRequirement": {
+      "attribute": "力量",
+      "value": 30
+    },
+    "staminaCost": 15
+  },
+  "深渊之石": {
+    "name": "深渊之石",
+    "type": "talisman",
+    "description": "蕴含着深渊能量的奇异石头，能让使用者在战斗中更加敏捷。",
+    "attributeEffect": {
+      "attribute": "体态",
+      "change": 5
+    }
+  },
+  "先祖之心": {
+    "name": "先祖之心",
+    "type": "key_item",
+    "description": "从被异化吞噬的先祖体内取出，它跳动着扭曲的血脉之力。",
+    "attributeEffect": {
+      "attribute": "异化",
+      "change": 20
+    }
+  },
+  "真实之镜": {
+    "name": "真实之镜",
+    "type": "key_item",
+    "description": "你战胜了镜中之王后获得的物品，它能让你看清万物的真实面貌。传说它能净化异化，也能驾驭异化。",
+    "attributeEffect": {
+      "attribute": "精神",
+      "change": 30,
+      "attribute2": "异化",
+      "change2": 30
+    }
+  },
+  "古老之弓": {
+    "name": "古老之弓",
+    "type": "weapon",
+    "description": "一把古老而精致的长弓，能大幅提升箭矢的穿透力，需要极佳的感知力来驾驭。",
+    "attributeEffect": {
+      "attribute": "感知",
+      "change": 15
+    },
+    "attributeRequirement": {
+      "attribute": "感知",
+      "value": 25
+    },
+    "staminaCost": 10,
+    "unlocksJob": "弓手"
+  },
+  "流血长剑": {
+    "name": "流血长剑",
+    "type": "weapon",
+    "description": "一把附带流血效果的弯刀，能够使敌人持续流失生命。",
+    "staminaCost": 10,
+    "skillEffect": {
+      "effect": "bleed",
+      "description": "对敌人造成持续流血伤害。",
+      "chance": 0.2
+    }
+  },
+  "虚弱之斧": {
+    "name": "虚弱之斧",
+    "type": "weapon",
+    "description": "一把被诅咒的巨斧，能够削弱敌人的攻击力。",
+    "staminaCost": 12,
+    "skillEffect": {
+      "effect": "weakness",
+      "description": "降低敌人攻击力。",
+      "chance": 0.2
+    }
+  },
+  "震慑战锤": {
+    "name": "震慑战锤",
+    "type": "weapon",
+    "description": "一把沉重的战锤，挥舞时能产生冲击波，小概率使敌人陷入眩晕。",
+    "staminaCost": 18,
+    "skillEffect": {
+      "effect": "stun",
+      "description": "使敌人眩晕，无法行动。",
+      "chance": 0.1
+    }
+  }
+}

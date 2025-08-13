@@ -1,0 +1,130 @@
+{
+  "异化狼人": {
+    "name": "异化狼人",
+    "strength": 25,
+    "hp": 50,
+    "exp": 15,
+    "lootChance": 0.3,
+    "loot": "狼牙项链",
+    "attackDesire": "中",
+    "attackCycleDuration": 8,
+    "exhaustionDuration": 3
+  },
+  "异化守卫": {
+    "name": "异化守卫",
+    "strength": 35,
+    "hp": 70,
+    "exp": 30,
+    "lootChance": 0.4,
+    "loot": "破损的铠甲碎片",
+    "attackDesire": "强",
+    "attackCycleDuration": 10,
+    "exhaustionDuration": 4
+  },
+  "异化蜥蜴": {
+    "name": "异化蜥蜴",
+    "strength": 20,
+    "hp": 40,
+    "exp": 12,
+    "lootChance": 0.2,
+    "loot": "蜥蜴鳞片",
+    "attackDesire": "强",
+    "attackCycleDuration": 6,
+    "exhaustionDuration": 2
+  },
+  "巢穴蜘蛛": {
+    "name": "巢穴蜘蛛",
+    "strength": 15,
+    "hp": 30,
+    "exp": 10,
+    "lootChance": 0.5,
+    "loot": "剧毒腺体",
+    "attackDesire": "弱",
+    "attackCycleDuration": 5,
+    "exhaustionDuration": 1
+  },
+  "堕落骑士": {
+    "name": "堕落骑士",
+    "strength": 45,
+    "hp": 90,
+    "exp": 50,
+    "lootChance": 0.6,
+    "loot": "堕落骑士剑",
+    "attackDesire": "极强",
+    "attackCycleDuration": 15,
+    "exhaustionDuration": 5,
+    "skills": [
+      {
+        "name": "震慑",
+        "description": "震慑你的精神，使你眩晕。",
+        "chance": 0.2,
+        "effect": "stun"
+      }
+    ]
+  },
+  "深渊守望者": {
+    "name": "深渊守望者",
+    "strength": 50,
+    "hp": 120,
+    "exp": 80,
+    "lootChance": 0.7,
+    "loot": "深渊之石",
+    "attackDesire": "极强",
+    "attackCycleDuration": 12,
+    "exhaustionDuration": 3,
+    "skills": [
+      {
+        "name": "流血",
+        "description": "对你造成持续流血伤害。",
+        "chance": 0.3,
+        "effect": "bleed"
+      },
+      {
+        "name": "虚弱诅咒",
+        "description": "使你的攻击力量降低。",
+        "chance": 0.2,
+        "effect": "weakness"
+      }
+    ]
+  },
+  "镜中之王-先祖": {
+    "name": "镜中之王-先祖",
+    "strength": 75,
+    "hp": 500,
+    "exp": 200,
+    "lootChance": 1.0,
+    "loot": "先祖之心",
+    "isFinalBoss": true,
+    "attackDesire": "强",
+    "attackCycleDuration": 10,
+    "exhaustionDuration": 4,
+    "skills": [
+      {
+        "name": "永恒梦魇",
+        "description": "使你陷入混乱和眩晕。",
+        "chance": 0.3,
+        "effect": "stun"
+      }
+    ]
+  },
+  "镜中之王 (自我)": {
+    "name": "镜中之王 (自我)",
+    "strength": 100,
+    "hp": 800,
+    "exp": 500,
+    "lootChance": 1.0,
+    "loot": "真实之镜",
+    "isFinalBoss": true,
+    "attackDesire": "极强",
+    "attackCycleDuration": 12,
+    "exhaustionDuration": 3,
+    "skills": [
+      {
+        "name": "虚空侵蚀",
+        "description": "对你造成持续流血伤害。",
+        "chance": 0.5,
+        "effect": "bleed"
+      }
+    ]
+  }
+}

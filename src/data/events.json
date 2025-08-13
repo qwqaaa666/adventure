@@ -1,0 +1,579 @@
+{
+  "eventPools": {
+    "1": [
+      {
+        "id": "intro-dream",
+        "text": "你做了一个奇怪的梦，梦中你看到一面布满裂痕的镜子，镜中的你向你伸出了手，你感到一股强大的力量在体内涌动。一股熟悉又陌生的低语在耳边回响：“……它选择了你……”。",
+        "choices": [
+          {
+            "text": "无视它，醒来。",
+            "type": "event",
+            "eventId": "next"
+          },
+          {
+            "text": "伸出手回应镜中的自己。",
+            "type": "attribute",
+            "attribute": "异化",
+            "change": 5,
+            "successText": "你感到体内的异化血脉被唤醒，它将是你力量的来源。"
+          }
+        ]
+      },
+      {
+        "text": "你躲在城堡的藏书阁里，意外发现了一本泛黄的古籍。书中记载了关于“镜之王”的模糊传说和异化血脉的起源。",
+        "choices": [
+          {
+            "text": "尝试阅读古籍。",
+            "type": "check",
+            "check": {
+              "attribute": "学习",
+              "value": 10
+            },
+            "success": {
+              "text": "你读懂了古籍中的一些内容，书中提到了“血脉的容器”和“双生之镜”的概念。你的学习属性增加了。",
+              "effect": {
+                "attribute": "学习",
+                "change": 3
+              },
+              "type": "event",
+              "eventId": "next"
+            },
+            "fail": {
+              "text": "你无法理解古籍中晦涩的文字，只能作罢。",
+              "type": "event",
+              "eventId": "next"
+            }
+          }
+        ]
+      },
+      {
+        "text": "在城堡的庭院里，你练习着最基础的剑术。一个年长的侍卫看到了你，他告诉你，你的父亲曾是一位强大的战士，但从未用过剑。",
+        "choices": [
+          {
+            "text": "询问更多关于父亲的事。",
+            "type": "dialogue",
+            "dialogueText": "侍卫摇了摇头，眼中充满了敬畏和恐惧：“陛下曾说过，真正的力量，来自内心。他从未需要冰冷的钢铁。据说他曾……以一人之力震慑了整个深渊。”"
+          },
+          {
+            "text": "继续练习剑术。",
+            "type": "attribute",
+            "attribute": "力量",
+            "change": 2,
+            "successText": "你专注于练习，感觉自己的力量有所增长。"
+          }
+        ]
+      },
+      {
+        "text": "你偷偷溜出城堡，在村庄里看到了一个流浪商人，他向你兜售一些奇怪的古物。",
+        "choices": [
+          {
+            "text": "购买他的古物，需要5点运气。",
+            "type": "check",
+            "check": {
+              "attribute": "运气",
+              "value": 5
+            },
+            "success": {
+              "text": "你买到了一个精致的木雕，上面刻画着扭曲的符文，你感到它能增强你的精神。运气属性增加。",
+              "effect": {
+                "attribute": "精神",
+                "change": 5,
+                "attribute2": "运气",
+                "change2": 1
+              },
+              "type": "item",
+              "item": "扭曲符文木雕"
+            },
+            "fail": {
+              "text": "你买到的是一个普通的石头，商人笑着离开了。",
+              "type": "event",
+              "eventId": "next"
+            }
+          }
+        ]
+      },
+      {
+        "text": "你偶然听到两位宫廷法师在窃窃私语，他们提到了“异化血脉”的失控，以及“镜”的诅咒。",
+        "choices": [
+          {
+            "text": "偷听更多细节。",
+            "type": "check",
+            "check": {
+              "attribute": "感知",
+              "value": 5
+            },
+            "success": {
+              "text": "你听到了关键信息：“王国的命运将由‘它’的选择决定，要么融合，要么毁灭。”你的感知属性增加。",
+              "effect": {
+                "attribute": "感知",
+                "change": 3
+              },
+              "type": "event",
+              "eventId": "next"
+            },
+            "fail": {
+              "text": "你发出了声音，法师们警惕地看了过来，你不得不离开。",
+              "type": "event",
+              "eventId": "next"
+            }
+          }
+        ]
+      }
+    ],
+    "2": [
+      {
+        "id": "main-2-1",
+        "text": "你进入了一片迷雾森林，一个手持古老石板的老人拦住了你的去路。他告诉你，你是血脉的继承者，并预言你将面临“镜”的试炼。",
+        "choices": [
+          {
+            "text": "相信老人，向他请教。",
+            "type": "dialogue",
+            "dialogueText": "老人递给你一张地图碎片，上面标注了前往“镜之遗迹”的路线。他低声说：“寻找石碑，那里有你血脉的真相。记住，异化本身不是邪恶，只是没有方向的力量。”"
+          },
+          {
+            "text": "怀疑老人，独自探索。",
+            "type": "event",
+            "eventId": "next"
+          }
+        ]
+      },
+      {
+        "id": "main-2-2",
+        "text": "你根据老人的地图碎片，找到了一个古老的石碑。上面刻画着你的家族徽章，但被一股扭曲的异化能量侵蚀了。",
+        "choices": [
+          {
+            "text": "触摸石碑，感受其中的力量。",
+            "type": "attribute",
+            "attribute": "异化",
+            "change": 10,
+            "successText": "一股强大的异化能量涌入你的体内，你的异化属性大幅增加。"
+          },
+          {
+            "text": "用自己的力量对抗这股能量。",
+            "type": "check",
+            "check": {
+              "attribute": "精神",
+              "value": 30
+            },
+            "success": {
+              "text": "你成功地抵抗了异化能量的侵蚀，并从中领悟了控制异化力量的法门。",
+              "effect": {
+                "attribute": "精神",
+                "change": 5
+              },
+              "type": "event",
+              "eventId": "next"
+            },
+            "fail": {
+              "text": "你被异化能量反噬，感觉身体受到了伤害。",
+              "effect": {
+                "hpChange": -10
+              },
+              "type": "event",
+              "eventId": "next"
+            }
+          }
+        ]
+      },
+      {
+        "text": "你遇到了一位孤独的猎人，他正在追踪一只“异化狼人”。他需要你的帮助。",
+        "choices": [
+          {
+            "text": "与他一同追踪。",
+            "type": "combat",
+            "monster": "异化狼人"
+          },
+          {
+            "text": "拒绝，独自继续旅程。",
+            "type": "event",
+            "eventId": "next"
+          }
+        ]
+      },
+      {
+        "text": "你进入了一个潮湿的洞穴，突然听到沙沙声，你被一群怪物包围了！",
+        "choices": [
+          {
+            "text": "战斗！",
+            "type": "combat",
+            "monsters": ["巢穴蜘蛛", "巢穴蜘蛛", "异化蜥蜴"]
+          },
+          {
+            "text": "尝试潜行逃跑。",
+            "type": "check",
+            "check": {
+              "attribute": "体态",
+              "value": 30
+            },
+            "success": {
+              "text": "你成功地悄无声息地溜走了。",
+              "type": "event",
+              "eventId": "next"
+            },
+            "fail": {
+              "text": "你的动作太大，惊动了怪物们，你不得不战斗！",
+              "type": "combat",
+              "monsters": ["巢穴蜘蛛", "巢穴蜘蛛", "异化蜥蜴"]
+            }
+          }
+        ]
+      }
+    ],
+    "3": [
+      {
+        "id": "main-3-1",
+        "text": "你终于抵达了王国首都，看到了高耸入云的皇宫。但城市的街道上弥漫着一股异样的压抑感。你看到人们眼神空洞，仿佛失去了灵魂。",
+        "choices": [
+          {
+            "text": "向一个守卫打听情况。",
+            "type": "check",
+            "check": {
+              "attribute": "情感",
+              "value": 20
+            },
+            "success": {
+              "text": "守卫的眼中充满了恐惧，他低声告诉你：“国王陛下已经很久没有露面了，有人说，他被‘镜’吞噬了。人们不再思考，不再感受，只剩下空壳。”",
+              "type": "event",
+              "eventId": "next"
+            },
+            "fail": {
+              "text": "守卫面无表情地让你离开，你感到一阵不安。",
+              "type": "event",
+              "eventId": "next"
+            }
+          }
+        ]
+      },
+      {
+        "text": "你在废墟中发现了一个被遗弃的古老神庙，一个憔悴的祭司正在祈祷，他看到了你，眼神中闪过一丝希望。",
+        "choices": [
+          {
+            "text": "询问他发生了什么。",
+            "type": "dialogue",
+            "dialogueText": "祭司颤抖着说：“异化正在蔓延，神的力量正在减弱。我们唯一的希望，就是找到‘镜’的真正主人，或者……摧毁它。但摧毁它，是否也会摧毁我们自己？”"
+          },
+          {
+            "text": "离开神庙，继续前进。",
+            "type": "event",
+            "eventId": "next"
+          }
+        ]
+      },
+      {
+        "text": "你在一片废墟中搜寻时，突然从阴影中窜出了一只堕落骑士和两只异化狼人！",
+        "choices": [
+          {
+            "text": "迎战！",
+            "type": "combat",
+            "monsters": ["堕落骑士", "异化狼人", "异化狼人"]
+          },
+          {
+            "text": "尝试用感知能力找到弱点。",
+            "type": "check",
+            "check": {
+              "attribute": "感知",
+              "value": 45
+            },
+            "success": {
+              "text": "你发现了骑士身上的一个致命弱点，直接发起攻击！",
+              "type": "combat",
+              "monsters": ["堕落骑士", "异化狼人", "异化狼人"]
+            },
+            "fail": {
+              "text": "你没找到任何弱点，被怪物们包围了！",
+              "type": "combat",
+              "monsters": ["堕落骑士", "异化狼人", "异化狼人"]
+            }
+          }
+        ]
+      },
+      {
+        "text": "你深入了一处被异化力量侵蚀的森林，看到了一个形似你父亲的幻影。他并没有攻击你，只是静静地注视着你。",
+        "choices": [
+          {
+            "text": "尝试与幻影沟通，需要较高的情感属性。",
+            "type": "check",
+            "check": {
+              "attribute": "情感",
+              "value": 40
+            },
+            "success": {
+              "text": "你感受到了一股深深的悲伤和爱意，幻影在你耳边低语：“找到真正的自己……不要重蹈覆辙……”。随后幻影消散，你的情感属性得到了提升。",
+              "effect": {
+                "attribute": "情感",
+                "change": 5
+              },
+              "type": "event",
+              "eventId": "next"
+            },
+            "fail": {
+              "text": "你无法理解幻影的意图，它只是静静地消失了。",
+              "type": "event",
+              "eventId": "next"
+            }
+          }
+        ]
+      },
+      {
+        "text": "你在一处被遗忘的古战场上，看到了一位身着残破铠甲的战士。他看到了你，眼神中充满警惕。",
+        "choices": [
+          {
+            "text": "上前搭话，试图获取情报。",
+            "type": "check",
+            "check": {
+              "attribute": "精神",
+              "value": 35
+            },
+            "success": {
+              "text": "战士感受到你坚定的意志，放松了警惕。他告诉你，深渊的力量正在侵蚀王国，许多曾经的英雄都堕落了，变成了像他一样的“深渊守望者”。",
+              "type": "dialogue",
+              "dialogueText": "“你很特别，孩子。我能感受到你体内那股清澈的力量。但要小心，深渊……它会模仿你内心最深处的欲望。”",
+              "eventId": "next"
+            },
+            "fail": {
+              "text": "战士认为你也是被异化侵蚀的怪物，举起了武器。一场战斗不可避免！",
+              "type": "combat",
+              "monsters": ["深渊守望者"]
+            }
+          },
+          {
+            "text": "悄悄绕开他。",
+            "type": "check",
+            "check": {
+              "attribute": "体态",
+              "value": 40
+            },
+            "success": {
+              "text": "你成功地绕开了战士，没有引起他的注意。",
+              "type": "event",
+              "eventId": "next"
+            },
+            "fail": {
+              "text": "你发出的声音惊动了他，他警惕地看着你，然后举起了武器！",
+              "type": "combat",
+              "monsters": ["深渊守望者"]
+            }
+          }
+        ]
+      }
+    ],
+    "4": [
+      {
+        "id": "main-4-1",
+        "text": "你终于找到了隐藏在皇宫深处的“镜之遗迹”，一面巨大的镜子矗立在那里，它散发着你血脉的共鸣。你感到一阵头晕，镜中的世界似乎与现实重叠了。",
+        "choices": [
+          {
+            "text": "试图通过镜子。",
+            "type": "check",
+            "check": {
+              "attribute": "异化",
+              "value": 50
+            },
+            "success": {
+              "text": "你穿过了镜面，进入了一个扭曲的镜像世界，在那里，你将面对更深的秘密。",
+              "type": "event",
+              "eventId": "touch-mirror"
+            },
+            "fail": {
+              "text": "你被镜子的力量排斥，身体感到一阵剧痛，无法进入。",
+              "effect": {
+                "hpChange": -20
+              },
+              "type": "event",
+              "eventId": "next"
+            }
+          },
+          {
+            "text": "后退，寻找其他线索。",
+            "type": "event",
+            "eventId": "next"
+          }
+        ]
+      },
+      {
+        "id": "easter-egg-cave",
+        "text": "你无意中发现了一个隐藏的山洞，里面似乎有微弱的光芒闪烁。你感到一股奇异的力量在召唤你。",
+        "unique": true,
+        "choices": [
+          {
+            "text": "进入山洞。",
+            "type": "event",
+            "eventId": "enter-cave-reset"
+          },
+          {
+            "text": "离开，无视它。",
+            "type": "event",
+            "eventId": "next"
+          }
+        ]
+      }
+    ],
+    "5": [
+      {
+        "id": "final-boss",
+        "text": "在镜中世界的最深处，你遇到了你的先祖，他已经完全被异化力量吞噬，成为了“镜中之王”。他向你发出了最终的挑战：“继承我的力量，或者，被我吞噬！”",
+        "choices": [
+          {
+            "text": "迎战，为王国和自己而战！",
+            "type": "boss_combat",
+            "monster": "镜中之王-先祖"
+          },
+          {
+            "text": "尝试用情感力量唤醒他。",
+            "type": "check",
+            "check": {
+              "attribute": "情感",
+              "value": 60
+            },
+            "success": {
+              "text": "你的情感力量触动了先祖残存的意识，你们的灵魂短暂地融合了！你获得了新的力量！",
+              "effect": {
+                "attribute": "异化",
+                "change": 20
+              },
+              "type": "event",
+              "eventId": "ending"
+            },
+            "fail": {
+              "text": "你的情感无法穿透异化的迷雾，你被先祖的力量反弹！",
+              "type": "boss_combat",
+              "monster": "镜中之王-先祖"
+            }
+          }
+        ]
+      }
+    ],
+    "6": [
+      {
+        "id": "true-final-boss",
+        "text": "在镜之遗迹的核心，你发现镜中的自己并非幻象，而是你内心深处，与异化血脉完美融合的另一个你。他平静地说：“我们是同一个人，但我们选择了不同的道路。现在，你必须选择。”",
+        "choices": [
+          {
+            "text": "相信自己，与镜中的自己战斗。",
+            "type": "boss_combat",
+            "monster": "镜中之王 (自我)"
+          },
+          {
+            "text": "拥抱镜中的自己，选择融合。",
+            "type": "check",
+            "check": {
+              "attribute": "异化",
+              "value": 70
+            },
+            "success": {
+              "text": "你拥抱了镜中的自己，两个意识完美融合。你成为了一个能够驾驭异化之力的全新存在，但代价是……你不再是你。你的游戏将在这里结束。",
+              "type": "event",
+              "eventId": "ending",
+              "endingId": 3
+            },
+            "fail": {
+              "text": "你的血脉力量不足以承受融合，你被镜中的自己吞噬了！",
+              "type": "event",
+              "eventId": "ending",
+              "endingId": 3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "monthEvents": {
+    "3": [
+      {
+        "text": "三月，风暴的季节。你感到体内异化力量变得异常活跃，仿佛与天象产生了某种共鸣。",
+        "choices": [
+          {
+            "text": "顺应这股力量，冥想。",
+            "type": "check",
+            "check": {
+              "attribute": "精神",
+              "value": 20
+            },
+            "success": {
+              "text": "你成功地控制了异化能量，并将其转化为自己的力量。精神和异化属性增加。",
+              "effect": {
+                "attribute": "精神",
+                "change": 2,
+                "attribute2": "异化",
+                "change2": 3
+              },
+              "type": "event",
+              "eventId": "next"
+            },
+            "fail": {
+              "text": "你没能控制住这股力量，它在体内肆虐，让你感到虚弱。",
+              "effect": {
+                "hpChange": -5
+              },
+              "type": "event",
+              "eventId": "next"
+            }
+          }
+        ]
+      }
+    ],
+    "7": [
+      {
+        "text": "七月，炎炎夏日。你在旅途中遇到了一位年迈的吟游诗人，他正在弹奏一首关于“失落王权”的悲歌。",
+        "choices": [
+          {
+            "text": "打赏他，听他讲述故事。",
+            "type": "dialogue",
+            "dialogueText": "诗人收下了你的钱，低声吟唱：“国王曾试图用自己的灵魂铸造一面完美的镜子，以净化异化血脉。但他失败了，镜子破碎，诅咒随之降临……”"
+          },
+          {
+            "text": "离开，不理会他。",
+            "type": "event",
+            "eventId": "next"
+          }
+        ]
+      }
+    ],
+    "10": [
+      {
+        "text": "十月，丰收的季节。你在市集上看到一个神秘的商人，他似乎能感知到你身上的异化血脉，向你兜售一本《异化掌控入门》。",
+        "choices": [
+          {
+            "text": "购买古籍，需要30点学习属性。",
+            "type": "check",
+            "check": {
+              "attribute": "学习",
+              "value": 30
+            },
+            "success": {
+              "text": "你购买了古籍，从中学会了如何更有效地使用异化力量。你的异化和学习属性都增加了。",
+              "effect": {
+                "attribute": "异化",
+                "change": 5,
+                "attribute2": "学习",
+                "change2": 5
+              },
+              "type": "event",
+              "eventId": "next"
+            },
+            "fail": {
+              "text": "商人看你无法理解，摇了摇头，收起了古籍。",
+              "type": "event",
+              "eventId": "next"
+            }
+          }
+        ]
+      },
+      {
+        "text": "你意外地发现了一把被遗忘的古老长弓，它散发着强大的感知魔力。",
+        "choices": [
+          {
+            "text": "拾起这把弓。",
+            "type": "item",
+            "item": "古老之弓"
+          },
+          {
+            "text": "不理会，继续前进。",
+            "type": "event",
+            "eventId": "next"
+          }
+        ]
+      }
+    ]
+  }
+}
